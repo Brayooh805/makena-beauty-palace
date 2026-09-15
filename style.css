@@ -281,7 +281,7 @@ header {
 }
 .row-image img {
   width: 100%;
-  height: 520px;
+  height: 500px;
   object-fit: cover;
   object-position: center 25%;
   transition: transform 0.7s ease;
