@@ -35,4 +35,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 30) {
-    header.style.boxShadow = '0 6px 24px
+    header.style.boxShadow = '0 6px 24px rgba(201, 162, 39, 0.12)';
+  } else {
+    header.style.boxShadow = 'none';
+  }
+});

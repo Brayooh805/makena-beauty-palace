@@ -6,7 +6,6 @@
   --gold-light: #e8c96b;
   --gold-dark: #a17d18;
   --charcoal: #1a1a1a;
-  --charcoal-soft: #2a2a2a;
   --cream: #fdfaf3;
   --cream-deep: #f6efe1;
   --text: #2b2b2b;
@@ -30,11 +29,7 @@ img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
-.container {
-  width: min(1180px, 92%);
-  margin-inline: auto;
-}
-
+.container { width: min(1180px, 92%); margin-inline: auto; }
 .section { padding: 100px 0; }
 
 .eyebrow {
@@ -53,7 +48,6 @@ ul { list-style: none; }
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
   line-height: 1.15;
-  letter-spacing: -0.01em;
   color: var(--charcoal);
   margin-bottom: 20px;
 }
@@ -122,15 +116,8 @@ header {
   justify-content: space-between;
   padding: 14px 0;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.logo img {
-  height: 56px;
-  width: auto;
-}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 56px; width: auto; }
 .logo-text { display: flex; flex-direction: column; line-height: 1; }
 .logo-text strong {
   font-family: 'Cormorant Garamond', serif;
@@ -164,6 +151,7 @@ header {
 }
 .nav-links a:not(.btn-nav):hover { color: var(--gold-dark); }
 .nav-links a:not(.btn-nav):hover::after { width: 100%; }
+
 .btn-nav {
   background: var(--charcoal);
   color: var(--white);
@@ -210,7 +198,7 @@ header {
   inset: 0;
   background:
     linear-gradient(120deg, rgba(26,26,26,0.92) 0%, rgba(26,26,26,0.72) 45%, rgba(26,26,26,0.55) 100%),
-    url('images/makeup-3.jpg') center/cover no-repeat;
+    url('images/makeup-3.jpeg.jpeg') center/cover no-repeat;
   z-index: 0;
 }
 .hero-bg::after {
@@ -227,7 +215,6 @@ header {
   font-size: clamp(2.6rem, 6vw, 4.4rem);
   font-weight: 600;
   line-height: 1.08;
-  letter-spacing: -0.01em;
   margin-bottom: 24px;
 }
 .hero h1 em {
@@ -244,7 +231,6 @@ header {
   margin-bottom: 36px;
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 60px; }
-
 .hero-stats {
   display: flex;
   gap: 50px;
@@ -324,11 +310,7 @@ header {
   color: var(--charcoal);
   margin-bottom: 20px;
 }
-.row-text p {
-  color: var(--muted);
-  margin-bottom: 22px;
-  font-size: 1rem;
-}
+.row-text p { color: var(--muted); margin-bottom: 22px; font-size: 1rem; }
 
 .checklist { display: grid; gap: 12px; margin-top: 20px; }
 .checklist li {
@@ -351,12 +333,57 @@ header {
   background-repeat: no-repeat;
 }
 
-/* ============ SERVICES ============ */
-.services {
+/* ============ ACHIEVEMENTS ============ */
+.achievements {
+  text-align: center;
   background: var(--cream-deep);
+  padding: 100px 0;
 }
-.services-head { text-align: center; margin-bottom: 60px; }
+.achievements-sub {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+}
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+  text-align: left;
+}
+.achievement-card {
+  background: var(--white);
+  padding: 34px 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(26,26,26,0.06);
+  border-left: 4px solid var(--gold);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.achievement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(201,162,39,0.15);
+}
+.ach-icon { font-size: 2rem; margin-bottom: 14px; line-height: 1; }
+.achievement-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+.ach-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 12px;
+}
+.ach-desc { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
 
+/* ============ SERVICES ============ */
+.services { background: var(--cream); }
+.services-head { text-align: center; margin-bottom: 60px; }
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -382,17 +409,14 @@ header {
   color: var(--charcoal);
   margin-bottom: 12px;
 }
-.service-card p {
-  color: var(--muted);
-  font-size: 0.94rem;
-}
+.service-card p { color: var(--muted); font-size: 0.94rem; }
 
 /* ============ CTA ============ */
 .cta {
   position: relative;
   background:
     linear-gradient(120deg, rgba(26,26,26,0.92), rgba(26,26,26,0.78)),
-    url('images/makeup-1.jpg') center/cover;
+    url('images/makeup-1.jpeg') center/cover;
   color: var(--white);
   padding: 100px 0;
   text-align: center;
@@ -404,10 +428,7 @@ header {
   font-weight: 600;
   margin-bottom: 18px;
 }
-.cta p {
-  color: rgba(255,255,255,0.82);
-  margin-bottom: 34px;
-}
+.cta p { color: rgba(255,255,255,0.82); margin-bottom: 34px; }
 .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
 /* ============ FOOTER ============ */
@@ -458,11 +479,7 @@ footer ul li a:hover { color: var(--gold); }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 980px) {
-  .row {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    margin-bottom: 80px;
-  }
+  .row { grid-template-columns: 1fr; gap: 40px; margin-bottom: 80px; }
   .row.reverse .row-image,
   .row.reverse .row-text { order: unset; }
   .row-image img { height: 420px; }
@@ -494,9 +511,18 @@ footer ul li a:hover { color: var(--gold); }
     max-height: 460px;
     padding: 24px 6% 32px;
   }
-  .nav-links a { padding: 14px 0; width: 100%; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .nav-links a {
+    padding: 14px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
   .nav-links a:not(.btn-nav)::after { display: none; }
-  .btn-nav { margin-top: 18px; width: 100%; text-align: center; padding: 14px; }
+  .btn-nav {
+    margin-top: 18px;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
 
   .logo img { height: 44px; }
   .logo-text strong { font-size: 1.05rem; }
@@ -510,6 +536,8 @@ footer ul li a:hover { color: var(--gold); }
   .hero-actions .btn { width: 100%; }
   .cta-actions { flex-direction: column; }
   .cta-actions .btn { width: 100%; }
+
+  .achievements { padding: 60px 0; }
 }
 
 @media (max-width: 420px) {
