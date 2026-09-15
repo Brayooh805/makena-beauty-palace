@@ -1,4 +1,3 @@
-/* ============ RESET ============ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -282,8 +281,9 @@ header {
 }
 .row-image img {
   width: 100%;
-  height: 560px;
+  height: 520px;
   object-fit: cover;
+  object-position: center 25%;
   transition: transform 0.7s ease;
 }
 .row-image:hover img { transform: scale(1.05); }
